@@ -7,13 +7,18 @@
 #property link      "https://www.mql5.com"
 #property version   "1.00"
 #property strict
+ 
+input string    Begin    = "01:00";   
+input string    End      = "10:00";  
+
 //+------------------------------------------------------------------+
 //| Expert initialization function                                   |
 //+------------------------------------------------------------------+
 int OnInit()
   {
 //---
-   
+   if (End > Begin)
+      Print("OKKKKKKKKKKKKKKKKKKKKKK");
 //---
    return(INIT_SUCCEEDED);
   }
@@ -31,6 +36,5 @@ void OnDeinit(const int reason)
 void OnTick()
   {
 //---
-   Print("Test : ",Symbol());
   }
 //+------------------------------------------------------------------+
