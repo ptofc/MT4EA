@@ -166,7 +166,7 @@ void OnEndOfDay() {
             }
          }
          else {
-            OrderDelete(ticket);
+            // OrderDelete(ticket);
          }
         }
       else
