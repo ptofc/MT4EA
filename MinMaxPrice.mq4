@@ -11,9 +11,9 @@
 
 input double    LotSize    =1;
 input double    TakeProfit =20; // TakeProfit in pip
-input double    StopLoss   =20; // StopLoss in pip    
-input string    Begin      = "01:00";   
-input string    End        = "10:00"; 
+input double    StopLoss   =40; // StopLoss in pip    
+input string    Begin      = "08:00";   
+input string    End        = "18:00"; 
 input string    EndDay     = "23:30";
 
 // API
@@ -43,6 +43,7 @@ bool m_endDay = false;
 //+------------------------------------------------------------------+
 //| Expert initialization function                                   |
 //+------------------------------------------------------------------+
+
 int OnInit()
   {
 //---
@@ -166,7 +167,7 @@ void OnEndOfDay() {
             }
          }
          else {
-            OrderDelete(ticket);
+            //OrderDelete(ticket);
          }
         }
       else
